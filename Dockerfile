@@ -4,9 +4,10 @@ ENV PYTHONPATH /usr/local/bin/python
 ENV LOGPATH /var/log
 
 RUN echo http://dl-cdn.alpinelinux.org/alpine/edge/testing >> /etc/apk/repositories
+RUN echo http://dl-cdn.alpinelinux.org/alpine/edge/main >> /etc/apk/repositories
 RUN echo http://dl-4.alpinelinux.org/alpine/edge/community >> /etc/apk/repositories
 RUN apk update
-RUN apk add --no-cache gcc linux-headers musl-dev pcre-dev git imagemagick wkhtmltopdf wget poppler poppler-utils libxml2 libxslt libxml2-dev libxslt-dev tesseract-ocr-dev tesseract-ocr xvfb gfortran libwebp libwebp-dev
+RUN apk add --no-cache gcc linux-headers pcre-dev git glib imagemagick wkhtmltopdf wget poppler poppler-utils libxml2 libxslt libxml2-dev libxslt-dev tesseract-ocr-dev tesseract-ocr xvfb gfortran
 
 ADD deploy/zbar-install.sh .
 
