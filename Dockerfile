@@ -6,7 +6,7 @@ ENV LOGPATH /var/log
 RUN echo http://dl-cdn.alpinelinux.org/alpine/edge/testing >> /etc/apk/repositories
 RUN echo http://dl-4.alpinelinux.org/alpine/edge/community >> /etc/apk/repositories
 RUN apk update
-RUN apk add --no-cache gcc linux-headers musl-dev pcre-dev git imagemagick wkhtmltopdf wget poppler poppler-utils libxml2 libxslt libxml2-dev libxslt-dev tesseract-ocr-dev tesseract-ocr xvfb
+RUN apk add --no-cache gcc linux-headers musl-dev pcre-dev git imagemagick wkhtmltopdf wget poppler poppler-utils libxml2 libxslt libxml2-dev libxslt-dev tesseract-ocr-dev tesseract-ocr xvfb gfortran
 
 ADD deploy/zbar-install.sh .
 
