@@ -16,5 +16,7 @@ RUN mkdir -p /usr/share/tessdata/
 RUN wget https://github.com/tesseract-ocr/tessdata/raw/master/eng.traineddata -O /tmp/eng.traineddata > /dev/null
 RUN mv -v /tmp/eng.traineddata /usr/share/tessdata/
 
+RUN ln -s /usr/include/locale.h /usr/include/xlocale.h
+
 # ADD deploy/wkhtmltopdf.sh .
 # RUN ./wkhtmltopdf.sh
