@@ -20,3 +20,11 @@ RUN ln -s /usr/include/locale.h /usr/include/xlocale.h
 
 # ADD deploy/wkhtmltopdf.sh .
 # RUN ./wkhtmltopdf.sh
+
+RUN mkdir -p /opt/current-app
+
+WORKDIR /opt/current-app
+
+ADD . .
+
+RUN pip install -r requirements.txt
