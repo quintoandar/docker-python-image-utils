@@ -1,4 +1,4 @@
-FROM python:3-alpine
+FROM python:3.5.5.5.5.5-alpine
 
 ENV PYTHONPATH /usr/local/bin/python
 ENV LOGPATH /var/log
