@@ -52,7 +52,7 @@ six==1.10.0
 transitions==0.5.0
 tzlocal==1.4
 uritemplate==0.6
-urllib3==1.13.1
+urllib3==1.24.2
 uWSGI==2.0.14
 webencodings==0.5.1
 Werkzeug==0.12.1
